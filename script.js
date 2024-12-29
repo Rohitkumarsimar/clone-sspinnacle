@@ -12,18 +12,6 @@ main.addEventListener('mousemove', (move) => {
     });
 });
 
-window.addEventListener('scroll',  () => {
-    gsap.set(cursor, {
-        x: clientX,
-        y: clientY
-    });
-});
-
-
-
-
-
-
 gsap.to(".navbar", {
     scrollTrigger: {
         trigger: ".navbar",
