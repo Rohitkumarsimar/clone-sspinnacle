@@ -11,6 +11,9 @@
 /* Navbar  */
 body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #cursor{
@@ -563,4 +566,263 @@ nav button:hover::before {
 
 .project button:hover::before {
     transform: translateX(-150%) rotate(85deg); 
+}
+
+.marque{
+    position: relative;
+    margin-top: 150px;
+    font-size: 45px;
+    font-weight: 700;
+    font-style: italic;
+    height: 5vw;
+    width: 100%;
+    background: #000;
+    color: white;
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+.marque .m1{
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+}
+.marque .m1:nth-child(1) {
+    animation-delay: calc(30s / 6 *(6 - 1 ) * -1);
+}
+
+.marque .m1:nth-child(2) {  
+    animation-delay: calc(30s / 6 *(6 - 2 )   *-1); 
+}
+
+.marque .m1:nth-child(3) {
+    animation-delay: calc(30s / 6 *(6 - 3 )   * -1); 
+}
+.marque .m1:nth-child(4) {
+    animation-delay: calc(30s / 6 *(6 - 4 ) * -1); 
+}
+.marque .m1:nth-child(5) {
+    animation-delay: calc(30s / 6 *(6 - 5 ) * -1); 
+}
+.marque .m1:nth-child(6) {
+    animation-delay: calc(30s / 6 *(6 - 6 ) * -1); 
+}
+.marque .m1:nth-child(7) {
+    animation-delay: calc(30s / 6 *(6 - 7 ) * -1); 
+}
+
+@keyframes scroll {
+    
+    to{
+        left: -100%;
+    }
+}
+
+.m1 img{
+    animation: rotate 3s linear infinite alternate;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+}
+
+
+footer {
+    background: #000;
+    color: white;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    flex-direction: column;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerHeading {
+    position: relative;
+    height: 10vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerHeading div:first-child {
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.footerHeading div:first-child span:nth-child(2) {
+    color: #228AE7;
+}
+
+.footer button {
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.26);
+    width: 150px;
+    padding: 13px 10px;
+    background: #000;
+    color: #228AE7;
+    border: 2px solid #228AE7;
+    border-radius: 50px;
+    transition: all ease-in-out 0.1s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.footer button:hover {
+    transition: ease-in-out 0.1s;
+    background: #228AE7;
+    color: white;
+}
+
+.footer button a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.496);
+}
+
+footer .container {
+    height: 25vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .address{
+    position: relative;
+    top: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address div:nth-child(2){
+    font-size: 16px;
+    font-weight: 600;
+    width: 300px;
+}
+
+.address div:nth-child(3) a{
+    display: flex;
+text-decoration: none;
+font-size: 14px;
+font-weight: 600;
+margin-bottom: 20px;
+text-align: center;
+align-items: center;
+gap: 10px;
+}
+
+footer .links{
+    display: flex;
+    position: relative;
+    top: 30px;
+    gap: 30px;
+}
+
+footer .links span{
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+footer .container .links ul {
+    
+    line-height: 40px;
+    gap: 30px;
+    top: 20px;
+}
+
+.ending{
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.442);
+    
+}
+
+
+@media  screen and (max-width: 500px) {
+    nav{
+        height: 15vw;
+        width: 100%;
+    }
+    .navbar{
+        display: flex;
+        width: 90%;
+        gap: 10px;
+        height: 15vw;
+        position: static;
+    }
+    .navbar ul{
+        gap: 10px;
+    }
+    .navbar button{
+        height: 15px;
+        width: 70px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .navbar.scrolled{
+        position: static;
+        display: flex;
+        width: 90%;
+        gap: 10px;
+        height: 15vw;
+    }
+    .fly{
+        display: none;
+    }
+    footer {
+        height: 610px;
+        margin-top: 150px;
+    }
+    .marque{
+        display: none;
+    }
+    .footerHeading{
+        display: none;
+    }
+    .line2{
+        display: none;
+    }
+    .ending{
+        display: none;
+    }
 }
