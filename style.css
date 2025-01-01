@@ -752,6 +752,7 @@ footer .address {
     gap: 10px;
 }
 
+
 footer .links {
     display: flex;
     position: relative;
@@ -770,6 +771,11 @@ footer .container .links ul {
     line-height: 40px;
     gap: 30px;
     top: 20px;
+}
+
+footer a:hover {
+    color: #228AE7;
+    transition: ease-in-out 0.1s;
 }
 
 .ending {
@@ -840,6 +846,10 @@ footer .container .links ul {
     }
 
     .ending {
+        display: none;
+    }
+
+    #cursor {
         display: none;
     }
 }
