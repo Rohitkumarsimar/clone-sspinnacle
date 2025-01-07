@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Baloo+Bhaijaan+2:wght@400..800&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
+* { 
     font-family: "Montserrat", serif;
     margin: 0;
     padding: 0;
@@ -17,7 +17,8 @@ body {
 }
 
 #cursor {
-    position: relative;
+    position: fixed;
+    margin:0px;
     z-index: 1000;
     height: 12px;
     width: 12px;
@@ -38,7 +39,7 @@ nav {
     position: fixed;
     background: rgb(255, 255, 255);
     height: 4.8vw;
-    margin: 0 100px;
+    margin: 0 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.115), inset -4px 2px 1px #228AE7;
     flex-wrap: wrap;
     border-radius: 50px;
@@ -113,7 +114,7 @@ nav button::before {
     width: 16rem;
     height: 0;
     background-color: #228AE7;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
     transform: translateX(-50%) translateY(-50%) rotate(45deg);
     z-index: 0;
 }
@@ -410,6 +411,8 @@ nav button:hover::before {
     color: #228AE7;
 }
 
+
+
 /* SERVICES */
 
 .services {
@@ -423,11 +426,13 @@ nav button:hover::before {
 }
 
 .services .serve {
-
+    position: relative;
     font-family: "Barlow";
     border: 2px solid #C7C7C7;
     padding: 36px 30px;
     border-bottom: 0;
+    display: flex;
+    align-items: center;
 }
 
 .services .serve:last-child {
@@ -436,6 +441,14 @@ nav button:hover::before {
 
 .secoff {
     margin: 150px 0 130px 0;
+}
+.hovImg {
+    position: fixed;
+    height: auto;
+    width: 220px;
+    display: none;
+    z-index: 10000;
+    pointer-events: none;
 }
 
 
@@ -656,7 +669,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 78%;
     flex-direction: column;
 }
 
@@ -716,7 +729,7 @@ footer a {
 .line {
     height: 1px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.496);
+    background: rgba(255, 255, 255, 0.142);
 }
 
 footer .container {
@@ -737,8 +750,9 @@ footer .address {
 
 .address div:nth-child(2) {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     width: 300px;
+    line-height: 27px;
 }
 
 .address div:nth-child(3) a {
@@ -746,7 +760,6 @@ footer .address {
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 20px;
     text-align: center;
     align-items: center;
     gap: 10px;

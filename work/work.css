@@ -1,0 +1,80 @@
+.work2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.work2 span:nth-child(1){
+    font-size: 36px;
+    font-weight: 600;
+    color: #1F2937;
+}
+.work2 span:nth-child(2){
+    font-size: 36px;
+    font-weight: 600;
+    color: #228AE7;
+}
+.work2 div:last-child{
+    font-size: 16px;
+    color: #626262;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+
+
+.work{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 150px;
+}
+.projects{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    align-items: center;
+    width: 70%;
+    height: 300px;
+    margin: 10px;
+}
+.projects div{
+    border: 1px solid black;
+    width: 40%;
+    height: 70%;
+}
+
+.projects button{
+    position: relative;
+    margin-top: 50px;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px 30px;
+    background: #228AE7;
+    font-family: "Barlow";
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all ease-in-out 0.1s;
+}
+
+.projects button::before {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transform: translateX(150%) rotate(90deg);
+    transition: transform 0.9s ease-out;
+    pointer-events: none;
+}
+
+.projects button:hover::before {
+    transform: translateX(-150%) rotate(85deg);
+}

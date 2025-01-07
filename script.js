@@ -5,12 +5,60 @@ main.addEventListener('mousemove', (move) => {
     const { clientX, clientY } = move;
 
     gsap.to(cursor, {
-        x: clientX + window.scrollX,
-        y: clientY + window.scrollY,
+        x: clientX,
+        y: clientY, 
         duration: 1,
         ease: "back.out(1.7)"
     });
 });
+
+function createHoverEffect(elementClass, imageClass) {
+    const hoverElements = document.getElementsByClassName(elementClass);
+    const hoverImages = document.getElementsByClassName(imageClass);
+
+    Array.from(hoverElements).forEach((element, index) => {
+        const image = hoverImages[index];
+        
+        // Check if elements exist
+        if (!element || !image) {
+            console.warn(`Missing elements for ${elementClass}`);
+            return;
+        }
+
+        element.addEventListener('mousemove', (e) => {
+            // Set display before animation to ensure visibility
+            image.style.display = 'block';
+            
+            gsap.to(image, {
+                opacity: 1,
+                duration: 1,
+                position: "fixed",
+                top: e.clientY,
+                left: e.clientX,
+                xPercent: -50,
+                yPercent: -50,
+                ease: "expo.out"
+            });
+        });
+
+        element.addEventListener('mouseleave', () => {
+            gsap.to(image, {
+                opacity: 0,
+                duration: 0.5, // Reduced duration for better response
+                ease: "expo.out",
+                onComplete: () => {
+                    image.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+// Replace all hover functions with single function calls
+createHoverEffect('serve1', 'hovImg');
+createHoverEffect('serve2', 'hovImg2');
+createHoverEffect('serve3', 'hovImg3');
+createHoverEffect('serve4', 'hovImg4');
 
 gsap.to(".navbar", {
     scrollTrigger: {
