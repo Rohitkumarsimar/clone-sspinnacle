@@ -34,21 +34,19 @@
 .projects{
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
     align-items: center;
     width: 70%;
     height: 300px;
-    margin: 10px;
+    margin: 20px;
 }
 .projects div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 40%;
     height: 70%;
 }
 
 .projects button{
     position: relative;
-    margin-top: 50px;
     border: 0;
     border-radius: 5px;
     padding: 15px 30px;
@@ -78,3 +76,28 @@
 .projects button:hover::before {
     transform: translateX(-150%) rotate(85deg);
 }
+
+.projects div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+
+}
+
+.projects div:nth-child(1) div{
+    font-size: 16px;
+    color: #626262;
+    font-weight: 400;
+    margin-top: 10px;
+    font-family: "Barlow";
+}
+.projects img{
+    width: 90%;
+    height: 80%;
+}
+
+.projects:last-child{
+    margin-bottom: 100px;
+}
+

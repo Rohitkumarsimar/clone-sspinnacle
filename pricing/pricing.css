@@ -1,0 +1,172 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.heading1{
+    margin-bottom: 8px;
+}
+
+.heading1 span:first-child{
+    font-size: 36px;
+    font-weight: 600;
+    color: #1F2937;
+}
+.heading1 span:last-child{
+    font-size: 36px;
+    font-weight: 600;
+    color: #228AE7;
+}
+.heading2{
+    font-size: 16px;
+    color: #626262;
+    font-weight: 500;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 15px;
+    font-family: "Barlow";
+    letter-spacing: 1px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    /* height: 1000px; */
+    width: 85%;
+}
+.pricings{
+    width: 60%;
+    height: 100%;
+    margin: 25px;
+    padding: 30px;
+    border: 5px solid #06B6D4;
+    background: #1F2937;
+    border-radius: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    font-family: "Barlow";
+    text-align: left;
+}
+
+.pricings .heading{
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    font-family: "Barlow";
+    margin:20px 0;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+.price{
+    margin: 0;
+}
+
+.price .p1{
+    font-size: 24px;
+    font-weight: 600;
+    color: #228AE7;
+    font-family: "Barlow";
+}
+.price .p2{
+    font-size: 36px;
+    font-weight: 600;
+    color: #228AE7;
+    font-family: "Barlow";
+}
+.price .p3{
+    font-size: 20px;
+    font-weight: 600;
+    color: #D11E46;
+    font-family: "Barlow";
+    text-decoration: line-through;
+}
+.price .p4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+    font-family: "Barlow";
+}
+
+
+
+.cross{
+    transform: rotate(45deg);
+}
+
+.star{
+    color:#E3A008;
+}
+
+.pricings ul{ 
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #ffffff;
+    font-family: "Barlow";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+.pricings ul li{
+    margin-bottom: 20px;
+    font-family: "Barlow";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display:flex;
+    text-align: left;
+    letter-spacing: 0px;
+}
+
+.underline{
+    text-decoration: line-through;
+    color: #6B7280;
+}
+.services{
+    margin-top: 20px;
+}
+
+.pricings li img{
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.button button{
+    margin-top: 20px;
+    padding: 10px 100px;
+    width: 100%;
+    background: #1C64F2;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: "Barlow";
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.button button:hover{
+    background: #0f57e6;
+}

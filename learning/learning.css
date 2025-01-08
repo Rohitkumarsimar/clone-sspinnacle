@@ -1,0 +1,98 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 55%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.heading div:first-child{
+    font-size: 24px;
+    font-family: "Barlow";
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.heading div:nth-child(2){
+    font-size: 20px;
+    font-family: "Barlow";
+    font-weight: 600;
+}
+.heading div:nth-child(3){
+    font-size: 16px;
+    font-family: "Barlow";
+    font-weight: 500;
+}
+.heading div:nth-child(4){
+    font-size: 16px;
+    font-family: "Barlow";
+    font-weight: 500;
+}
+
+.content{
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+.content-heading{
+    font-size: 20px;
+    font-family: "Barlow";
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.content-subheading{
+    font-size: 18px;
+    font-family: "Barlow";
+    font-weight: 600;
+}
+.content span{
+    margin: 15px;
+    left: 50px;
+    font-size: 16px;
+    font-family: "Barlow";
+    font-weight: 500;
+}
+
+.content ul{
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+.content ul li{
+    font-family: "Barlow";
+    font-weight: 500;
+    line-height: 1.5;
+}
+.lastline{
+    margin-top: 25px;
+    font-family: "Barlow";
+    font-weight: 500;
+}
+
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25px;
+    line-height: 1.5;
+}
+.end div:first-child{
+    font-family: "Barlow";
+    font-weight: 500;
+}
+.end div:nth-child(2){
+    font-family: "Barlow";
+    font-weight: 700;
+    font-size: 18px;
+}
+
